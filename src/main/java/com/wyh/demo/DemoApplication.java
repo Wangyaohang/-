@@ -10,7 +10,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @SpringBootApplication(scanBasePackages="com.wyh.*")
 @ServletComponentScan(basePackages="com.wyh.filter")
-//@MapperScan({"com.*"})
+@MapperScan({"com.wyh.mapper.*"})
 @EnableCaching
 @EnableScheduling
 @EnableWebMvc
