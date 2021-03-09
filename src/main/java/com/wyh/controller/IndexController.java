@@ -9,6 +9,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.wyh.utils.IpAddress;
+
 @Controller
 @RequestMapping("/")
 public class IndexController {
@@ -18,6 +20,7 @@ public class IndexController {
 	public String IndexControl(HttpServletRequest request, HttpServletResponse response, Model model) {
 		logger.info("+++++++进入/接口");
 		//数据交互
+		logger.info("访问用户: "+IpAddress.getClientIpAddress(request));
 		logger.info("+++++++退出/接口");
 		return "/index";
 	}

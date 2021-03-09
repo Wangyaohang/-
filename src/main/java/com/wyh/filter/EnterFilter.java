@@ -15,6 +15,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.wyh.utils.IpAddress;
+/**
+ * 自定义过滤器
+ * fileterName：自定义名称
+ * urlPatterns：过滤哪些api
+ * @author Administrator
+ *
+ */
 @WebFilter(filterName="EnterFilter",urlPatterns="/*")
 public class EnterFilter implements Filter{
 	private static Logger log=LoggerFactory.getLogger(EnterFilter.class);
@@ -23,7 +30,7 @@ public class EnterFilter implements Filter{
 			throws IOException, ServletException {
 		HttpServletRequest request=(HttpServletRequest) req;
 		HttpServletResponse response=(HttpServletResponse) res;
-		log.info("访问用户: "+IpAddress.getClientIpAddress(request));
+		//log.info("访问用户: "+IpAddress.getClientIpAddress(request));
 		log.info("请求接口: ".concat(request.getServletPath()));
 		chain.doFilter(request, response);
 	}
