@@ -6,6 +6,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import com.github.pagehelper.PageHelper;
+/**
+ * 分页插件配置
+ * @author wyh
+ *
+ */
 @Configuration
 public class PageHelperConfiguration {
 	@Bean
