@@ -16,7 +16,9 @@ public class IndexController {
 
 	@RequestMapping("/")
 	public String IndexControl(HttpServletRequest request, HttpServletResponse response, Model model) {
-
+		logger.info("+++++++进入/接口");
+		//数据交互
+		logger.info("+++++++退出/接口");
 		return "/index";
 	}
 }
